@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Clock, CheckCircle, Zap, MapPin } from 'lucide-react';
+import { Clock, CheckCircle, Zap, MapPin, Phone } from 'lucide-react';
 
 const Hero = () => {
   return (
