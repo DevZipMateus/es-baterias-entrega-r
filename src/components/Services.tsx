@@ -38,52 +38,52 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-muted/30">
+    <section id="services" className="py-12 sm:py-16 lg:py-24 bg-muted/30 px-4 sm:px-6 lg:px-8">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full">
-            <Clock className="w-5 h-5" />
-            <span className="font-semibold">NOSSOS SERVIÇOS</span>
+        <div className="text-center space-y-4 mb-12 lg:mb-16">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-3 py-2 sm:px-4 rounded-full">
+            <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="font-semibold text-sm sm:text-base">NOSSOS SERVIÇOS</span>
           </div>
           
-          <h2 className="text-primary">
+          <h2 className="text-primary text-2xl sm:text-3xl lg:text-4xl">
             Soluções Completas em 
             <br />
             <span className="text-accent">Baterias Automotivas</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Oferecemos serviços especializados com atendimento 24 horas. 
             Nossos valores e qualidade no atendimento são nossos principais diferenciais.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div 
                 key={index}
-                className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-border"
+                className="bg-card p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-border"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                  <IconComponent className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-4 lg:mb-6">
+                  <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-card-foreground mb-3 lg:mb-4">
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 lg:mb-6">
                   {service.description}
                 </p>
                 
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center space-x-2 text-xs sm:text-sm text-muted-foreground">
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -94,34 +94,34 @@ const Services = () => {
         </div>
 
         {/* Additional Products */}
-        <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-card-foreground mb-4">
+        <div className="bg-card rounded-2xl p-6 lg:p-8 shadow-lg border border-border">
+          <div className="text-center mb-6 lg:mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-card-foreground mb-3 lg:mb-4">
               Produtos Adicionais
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-sm sm:text-base text-muted-foreground">
               Além dos nossos serviços principais, oferecemos diversos produtos automotivos
             </p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
             {additionalProducts.map((product, index) => (
               <div 
                 key={index}
-                className="flex items-center space-x-3 bg-muted/50 p-4 rounded-lg"
+                className="flex items-center space-x-3 bg-muted/50 p-3 lg:p-4 rounded-lg"
               >
-                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-card-foreground font-medium">{product}</span>
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" />
+                <span className="text-sm sm:text-base text-card-foreground font-medium">{product}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 lg:mt-12">
           <a 
             href="https://wa.me/5515991026043" 
-            className="btn-hero animate-pulse-glow"
+            className="btn-hero animate-pulse-glow text-sm sm:text-base lg:text-lg px-6 py-3 sm:px-8 sm:py-4"
           >
             Solicitar Orçamento Agora
           </a>

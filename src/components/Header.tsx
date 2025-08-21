@@ -49,20 +49,20 @@ const Header = () => {
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       {/* Top Bar */}
-      <div className="bg-primary text-primary-foreground py-2 px-4">
-        <div className="container-custom flex flex-col sm:flex-row justify-between items-center text-sm">
-          <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+      <div className="bg-primary text-primary-foreground py-2 px-2 sm:px-4">
+        <div className="container-custom flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
+          <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 mb-2 sm:mb-0">
             <div className="flex items-center space-x-1">
-              <Clock className="w-4 h-4" />
+              <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Atendimento 24h</span>
             </div>
-            <div className="hidden sm:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-1">
               <MapPin className="w-4 h-4" />
               <span>Av. Coronel Firmo Vieira de Camargo, 549</span>
             </div>
           </div>
           <div className="flex items-center space-x-1">
-            <Phone className="w-4 h-4" />
+            <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
             <a 
               href="https://wa.me/5515991026043" 
               className="hover:text-accent transition-colors font-medium"
@@ -77,28 +77,28 @@ const Header = () => {
       <header className={`w-full transition-all duration-300 ${
         isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-lg' : 'bg-background'
       }`}>
-        <div className="container-custom">
-          <div className="flex items-center justify-between h-16">
+        <div className="container-custom px-2 sm:px-4">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <img 
                 src="/lovable-uploads/93aab8db-9c96-4d30-bc98-7b101d65fc7e.png" 
                 alt="ES Baterias Automotivas & Acessórios" 
-                className="h-10 w-auto"
+                className="h-8 sm:h-10 w-auto"
               />
-              <div className="hidden sm:block">
-                <h2 className="text-lg font-bold text-primary">ES BATERIAS</h2>
+              <div className="hidden xs:block">
+                <h2 className="text-sm sm:text-lg font-bold text-primary">ES BATERIAS</h2>
                 <p className="text-xs text-muted-foreground">AUTOMOTIVAS & ACESSÓRIOS</p>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
+                  className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -109,39 +109,39 @@ const Header = () => {
             {/* CTA Button */}
             <a 
               href="https://wa.me/5515991026043" 
-              className="hidden md:inline-flex btn-hero animate-pulse-glow"
+              className="hidden lg:inline-flex btn-hero text-sm xl:text-base px-4 py-2 xl:px-8 xl:py-4 animate-pulse-glow"
             >
               Solicitar Orçamento
             </a>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden bg-background border-t border-border">
-              <nav className="py-4 space-y-4">
+            <div className="lg:hidden bg-background border-t border-border">
+              <nav className="py-4 space-y-2">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted transition-colors font-medium"
+                    className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted transition-colors font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </a>
                 ))}
-                <div className="px-4 pt-2">
+                <div className="px-4 pt-4">
                   <a 
                     href="https://wa.me/5515991026043" 
-                    className="btn-hero w-full text-center"
+                    className="btn-hero w-full text-center block py-3"
                   >
                     Solicitar Orçamento
                   </a>
