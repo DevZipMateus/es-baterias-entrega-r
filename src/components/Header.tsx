@@ -5,14 +5,36 @@ import { Menu, X, Phone, Clock, MapPin } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Se estiver no topo, sempre mostrar
+      if (currentScrollY < 10) {
+        setIsVisible(true);
+        setIsScrolled(false);
+      } else {
+        setIsScrolled(true);
+        
+        // Se rolando para baixo, esconder header
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false);
+        }
+        // Se rolando para cima, mostrar header
+        else if (currentScrollY < lastScrollY) {
+          setIsVisible(true);
+        }
+      }
+      
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navigation = [
     { name: 'Início', href: '#home' },
@@ -52,7 +74,7 @@ const Header = () => {
       {/* Main Header */}
       <header className={`fixed w-full z-40 transition-all duration-300 ${
         isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-lg' : 'bg-background'
-      }`}>
+      } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
