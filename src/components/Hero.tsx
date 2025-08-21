@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Clock, CheckCircle, Zap, MapPin, Phone } from 'lucide-react';
 
@@ -77,41 +76,20 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Image/Visual */}
+          {/* Video */}
           <div className="relative animate-fade-in">
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-              <div className="text-center space-y-6">
-                <div className="w-32 h-32 mx-auto bg-accent rounded-full flex items-center justify-center">
-                  <Zap className="w-16 h-16 text-accent-foreground" />
-                </div>
-                
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-white">
-                    Principais Marcas
-                  </h3>
-                  
-                  <div className="grid grid-cols-2 gap-3 text-white/90">
-                    <div className="bg-white/10 p-3 rounded-lg text-center font-semibold">
-                      Heliar
-                    </div>
-                    <div className="bg-white/10 p-3 rounded-lg text-center font-semibold">
-                      Moura
-                    </div>
-                    <div className="bg-white/10 p-3 rounded-lg text-center font-semibold">
-                      Tudor
-                    </div>
-                    <div className="bg-white/10 p-3 rounded-lg text-center font-semibold">
-                      Líder
-                    </div>
-                    <div className="bg-white/10 p-3 rounded-lg text-center font-semibold">
-                      Cral
-                    </div>
-                    <div className="bg-white/10 p-3 rounded-lg text-center font-semibold">
-                      Pioneiro
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 overflow-hidden">
+              <video
+                className="w-full h-auto rounded-xl"
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{ pointerEvents: 'none' }}
+              >
+                <source src="/lovable-uploads/bateria.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
             </div>
           </div>
         </div>
