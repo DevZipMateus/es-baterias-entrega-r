@@ -118,7 +118,7 @@ const Footer = () => {
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://instagram.com/esbateriastatui" 
+                  href="https://www.instagram.com/esbateriastatui/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300"
