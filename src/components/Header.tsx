@@ -58,7 +58,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/76482c21-9d01-4071-afca-f2fb14d836a1.png" 
+                src="/lovable-uploads/93aab8db-9c96-4d30-bc98-7b101d65fc7e.png" 
                 alt="ES Baterias Automotivas & Acessórios" 
                 className="h-10 w-auto"
               />
