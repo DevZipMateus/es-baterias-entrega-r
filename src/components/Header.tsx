@@ -45,7 +45,9 @@ const Header = () => {
   ];
 
   return (
-    <>
+    <div className={`fixed w-full z-40 transition-all duration-300 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2 px-4">
         <div className="container-custom flex flex-col sm:flex-row justify-between items-center text-sm">
@@ -72,9 +74,9 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className={`fixed w-full z-40 transition-all duration-300 ${
+      <header className={`w-full transition-all duration-300 ${
         isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-lg' : 'bg-background'
-      } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+      }`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -149,7 +151,7 @@ const Header = () => {
           )}
         </div>
       </header>
-    </>
+    </div>
   );
 };
 
