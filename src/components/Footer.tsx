@@ -110,7 +110,7 @@ const Footer = () => {
               <h5 className="font-semibold">Redes Sociais</h5>
               <div className="flex space-x-4">
                 <a 
-                  href="https://facebook.com/esbateriasautomotivas" 
+                  href="https://www.facebook.com/p/ES-baterias-automotivas-e-acess%C3%B3rios-61551254670591/?locale=pt_BR" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300"
