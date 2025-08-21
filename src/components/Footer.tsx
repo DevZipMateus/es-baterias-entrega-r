@@ -136,7 +136,7 @@ const Footer = () => {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-white/80 text-sm">
-              © 2024 ES Baterias Automotivas & Acessórios. Todos os direitos reservados.
+              © 2025 ES Baterias Automotivas & Acessórios. Todos os direitos reservados.
               <br />
               CNPJ: 46.708.607/0001-21
             </div>
